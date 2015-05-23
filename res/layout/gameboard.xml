@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attack"
+            android:id="@+id/attackOpponent"
+            android:onClick="onClickAttackShip"
+            android:layout_alignParentBottom="true" android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:layout_toLeftOf="@+id/addShip"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Ship"
+            android:id="@+id/addShip"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onClickAddShip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            />
+
+    <view android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          class="com.example.Battleship_Game_1_04.BoardView"
+          android:layout_gravity="center_horizontal"
+          android:layout_alignParentTop="true"
+          android:layout_alignParentStart="true"
+          android:id="@+id/boardview"/>
+
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rowSpinner"
+            android:layout_above="@+id/addShip"
+            android:layout_toLeftOf="@+id/addShip"
+            android:entries="@array/rows"
+            android:focusable="false"
+            />
+
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/directionsSpinner"
+            android:layout_alignBottom="@+id/rowSpinner"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/addShip"
+            />
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/columnSpinner"
+            android:layout_above="@+id/rowSpinner"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/rowSpinner"
+            android:entries="@array/columns"
+            android:focusable="false"
+            />
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shipSpinner"
+            android:layout_alignTop="@+id/columnSpinner"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/addShip"
+            />
+</RelativeLayout>
